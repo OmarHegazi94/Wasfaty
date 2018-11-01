@@ -18,7 +18,6 @@
 /************************************** VARIABLES ****************************************/
 // COLORS VARIABLES
 @main-color: #12cbc4;
-// @main-color: #082058;
 @light-blue-color: #00ccff;
 @purple-color: #673ab7;
 
@@ -33,9 +32,9 @@
 @roboto-medium-font: "roboto-medium", Arial, sans-serif;
 /************************************** GENERAL RESET **************************************/
 /* http://meyerweb.com/eric/tools/css/reset/ 
-     v2.0 | 20110126
-     License: none (public domain)
-  */
+       v2.0 | 20110126
+       License: none (public domain)
+    */
 html,
 body,
 div,
@@ -158,7 +157,7 @@ html {
   min-height: 100%;
 }
 body {
-  background-color: @white-color;
+  // background-color: lighten(@light-grey-color, 38%);
   overflow: hidden;
 }
 section {
@@ -181,6 +180,13 @@ h4,
 h5 {
   line-height: 1.5em;
   margin-bottom: 1.5em;
+}
+.btn-custom {
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  color: @white-color;
+  background: @main-color;
+  font-family: @roboto-medium-font;
 }
 #loader {
   position: absolute;
@@ -286,6 +292,7 @@ h5 {
           background-color: transparent;
           border-radius: 5px;
           border: 1px solid @main-color;
+          // color: @white-color;
         }
 
         .nav-link.active,
@@ -297,37 +304,70 @@ h5 {
       }
     }
   }
+  /************************************* MAIN-CONTENT *************************************/
   main {
     margin-bottom: 280px;
-    /************************************* MAP *************************************/
-    #map {
-      padding: 150px 0;
+
+    #pharmacies-registration {
+      margin-top: 100px;
       h2 {
         color: @light-grey-color;
         font-size: 2rem;
         font-family: @roboto-bold-font;
       }
       .container {
-        .col-md-12 {
-          .input-group {
-            font-family: @roboto-medium-font;
-            color: @black-color;
-            font-size: 0.7rem;
+        .row {
+          #registration-left {
+            #register-form {
+              opacity: 0;
+              transition: all 2.5s ease-out;
+              width: 0;
+              box-shadow: 0px 0px 27px -8px @light-grey-color;
+              padding: 1%;
+              border-radius: 5px;
+              .row {
+                margin: 2% 0;
+                .col {
+                  .form-control:focus {
+                    outline: 0;
+                    box-shadow: 0 0 0 0.1rem @main-color;
+                  }
+                  input {
+                    font-family: @roboto-medium-font;
+                  }
+                  select {
+                    font-family: @roboto-medium-font;
+                  }
+                  label {
+                    font-family: @roboto-bold-font;
+                  }
+                }
+              }
+            }
           }
-          #map-box {
-            border-radius: 5px;
-            text-align: center;
-            color: @light-grey-color;
-            font-size: 1.5rem;
-            font-family: @roboto-bold-font;
-            border: 1px solid @light-grey-color;
-            height: 500px;
-            width: auto;
+          #registration-right {
+            #location {
+              span {
+                font-family: @roboto-medium-font;
+                i {
+                  color: @main-color;
+                }
+              }
+            }
+            #pharmacies-map {
+              border-radius: 5px;
+              text-align: center;
+              color: @light-grey-color;
+              font-size: 1.5rem;
+              font-family: @roboto-bold-font;
+              border: 1px solid @light-grey-color;
+              height: 500px;
+              width: auto;
+            }
           }
         }
       }
     }
-    /****/
   }
 }
 /********************************** FOOTER ****************************************/
@@ -342,7 +382,6 @@ footer {
 
   font-family: @roboto-medium-font;
   color: @black-color;
-
   line-height: 1.2;
   #scroll-top {
     position: absolute;
@@ -439,6 +478,7 @@ footer {
     color: @white-color;
   }
 }
+
 @media (max-width: 991px) {
   #wrapper #mainNav {
     background-color: @white-color;
@@ -455,17 +495,24 @@ footer {
   }
 }
 @media (max-width: 768px) {
-  #wrapper #mainNav {
-    background-color: @white-color;
-  }
   #wrapper #mainNav .navbar-toggler {
     padding: 5px;
   }
   #wrapper #mainNav .navbar-brand {
     width: 50%;
   }
-  #wrapper main #map {
-    padding: 150px 0 0 0;
+  #wrapper main #pharmacies-registration {
+    margin-top: 70px;
+    padding-bottom: 0;
+  }
+  #wrapper
+    main
+    #pharmacies-registration
+    .container
+    .row
+    #registration-left
+    #register-form {
+    margin-bottom: 3rem;
   }
   footer {
     position: relative !important;
@@ -476,12 +523,52 @@ footer {
   }
 }
 
-@media (max-width: 415px) {
+@media (max-width: 450px) {
   #wrapper main {
     margin-bottom: 150px;
   }
+  #wrapper main #pharmacies-registration .container .row #registration-right {
+    margin-top: 30px;
+  }
+  #wrapper #mainNav .navbar-brand img {
+    width: 60%;
+  }
   #wrapper #mainNav .navbar-toggler {
-    font-size: 13px;
+    padding: 1px;
+  }
+  #wrapper main #pharmacies-registration h2 {
+    font-size: 1.5rem;
+  }
+  #wrapper
+    main
+    #pharmacies-registration
+    .container
+    .row
+    #registration-left
+    #register-form {
+    font-size: 0.8rem;
+  }
+  #wrapper
+    main
+    #pharmacies-registration
+    .container
+    .row
+    #registration-left
+    #register-form
+    .row
+    .col
+    input,
+  #wrapper
+    main
+    #pharmacies-registration
+    .container
+    .row
+    #registration-left
+    #register-form
+    .row
+    .col
+    select {
+    font-size: 0.8rem;
   }
   footer .container .row .col-md-4 .single-footer-widget {
     margin-top: 0 !important;

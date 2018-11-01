@@ -1,3 +1,14 @@
+/************************** SPINNER ****************************/
+function myFunction() {
+  myVar = setTimeout(showPage);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("wrapper").style.display = "block";
+  document.getElementById("footer").style.display = "block";
+}
+
 $(document).ready(function() {
   /*********************************** NAVIGATION *************************************/
   if ($("#mainNav").offset().top > 50) {
@@ -18,38 +29,35 @@ $(document).ready(function() {
   $(window).scroll(function() {
     if ($("#mainNav").offset().top > 50) {
       $("#mainNav").addClass("navbar-shrink");
-      $("#mainNav .navbar-nav .nav-item .nav-link").css("color", "#004286");
-      $("#mainNav #login").css("color", "#fff");
+      $("#mainNav .navbar-nav .nav-item .nav-link").css("color", "#000");
+      $("#mainNav #login").css("color", "#000");
     } else {
       $("#mainNav").removeClass("navbar-shrink");
       $("#mainNav .navbar-nav .nav-item .nav-link").css("color", "#fff");
     }
   });
-  /********************************* HEADER SLIDER ************************************/
-  $(".owl-carousel").owlCarousel({
-    animateOut: "lightSpeedOut",
-    animateIn: "fadeInUp",
-    stagePadding: 0,
-    smartSpeed: 450,
-    loop: true,
-    margin: 0,
-    nav: true,
-    dots: false,
-    autoplay: false,
-    mouseDrag: true,
-    touchDrag: true,
-    responsive: {
-      0: {
-        items: 1
-      },
-      600: {
-        items: 1
-      },
-      1000: {
-        items: 1
-      }
-    }
+  /*********************************** SCROLL ANIMATION **************************************/
+  window.sr = ScrollReveal();
+  sr.reveal(".card-deck", {
+    duration: 1500,
+    origin: "bottom",
+    distance: "150px",
+    mobile: false,
+    viewFactor: 0.2
   });
+
+  /** Form animation **/
+  $("form ,#contact-form")
+    .animate(
+      {
+        opacity: 1,
+        width: ["100%", "swing"],
+        height: ["100%", "swing"]
+      },
+      10000,
+      "linear"
+    )
+    .finish();
   /*********************************** SMOOTH SCROLL *****************************************/
   // Select all links with hashes
   $('a[href*="#"]')

@@ -18,7 +18,6 @@
 /************************************** VARIABLES ****************************************/
 // COLORS VARIABLES
 @main-color: #12cbc4;
-// @main-color: #082058;
 @light-blue-color: #00ccff;
 @purple-color: #673ab7;
 
@@ -33,9 +32,9 @@
 @roboto-medium-font: "roboto-medium", Arial, sans-serif;
 /************************************** GENERAL RESET **************************************/
 /* http://meyerweb.com/eric/tools/css/reset/ 
-     v2.0 | 20110126
-     License: none (public domain)
-  */
+         v2.0 | 20110126
+         License: none (public domain)
+      */
 html,
 body,
 div,
@@ -158,7 +157,7 @@ html {
   min-height: 100%;
 }
 body {
-  background-color: @white-color;
+  // background-color: lighten(@light-grey-color, 38%);
   overflow: hidden;
 }
 section {
@@ -182,157 +181,130 @@ h5 {
   line-height: 1.5em;
   margin-bottom: 1.5em;
 }
-#loader {
-  position: absolute;
-  // background: url("../../img/logo-en.png") no-repeat;
-  left: 50%;
-  top: 50%;
-  z-index: 1;
-  width: 150px;
-  height: 150px;
-  margin: -75px 0 0 -75px;
-  border: 1px solid #f3f3f3;
-  border-radius: 50%;
-  border-top: 16px solid @main-color;
-  -webkit-animation: spin 2s linear infinite;
-  animation: spin 2s linear infinite;
+.btn-custom {
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  color: @white-color;
+  background: @main-color;
+  font-family: @roboto-medium-font;
 }
+/************************************* NAVBAR *************************************/
+#mainNav {
+  background-color: @white-color;
+  transition: padding-top 0.3s, padding-bottom 0.3s;
+  padding-top: 0.5rem;
+  box-shadow: 4px -6px 19px 2px @light-grey-color;
 
-@-webkit-keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
+  .navbar-toggler {
+    padding: 13px;
+    border: 0;
+    color: @white-color;
   }
-  100% {
-    -webkit-transform: rotate(360deg);
-  }
-}
 
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-/* Add animation to "page content" */
-.animate-bottom {
-  position: relative;
-  -webkit-animation-name: animatebottom;
-  -webkit-animation-duration: 1s;
-  animation-name: animatebottom;
-  animation-duration: 1s;
-}
-
-@-webkit-keyframes animatebottom {
-  from {
-    bottom: -100px;
-    opacity: 0;
-  }
-  to {
-    bottom: 0px;
-    opacity: 1;
-  }
-}
-
-@keyframes animatebottom {
-  from {
-    bottom: -100px;
-    opacity: 0;
-  }
-  to {
-    bottom: 0;
-    opacity: 1;
-  }
-}
-/***************************** MADE BY DIABLO ******************************/
-#wrapper {
-  display: none;
-  /************************************* NAVBAR *************************************/
-  #mainNav {
-    background-color: @white-color;
-    transition: padding-top 0.3s, padding-bottom 0.3s;
-    padding-top: 0.5rem;
-    box-shadow: 4px -6px 19px 2px @light-grey-color;
-
-    .navbar-toggler {
-      padding: 13px;
-      border: 0;
-      color: @white-color;
+  .navbar-brand {
+    margin-right: 0;
+    img {
+      width: 35%;
+      z-index: 2;
     }
+  }
 
-    .navbar-brand {
-      margin-right: 0;
-      img {
-        width: 35%;
-        z-index: 2;
+  .navbar-nav {
+    .nav-item {
+      .nav-link {
+        font-size: 14px;
+        padding: 7px 15px !important;
+        letter-spacing: 0.5px;
+        color: @black-color !important;
+        font-family: @roboto-medium-font;
+        margin-right: 2px;
+        border: 1px solid transparent;
       }
-    }
 
-    .navbar-nav {
-      .nav-item {
-        .nav-link {
-          font-size: 14px;
-          padding: 7px 15px !important;
-          letter-spacing: 0.5px;
-          color: @black-color !important;
-          font-family: @roboto-medium-font;
-          margin-right: 2px;
-          border: 1px solid transparent;
-        }
+      #login {
+        padding: 7px 20px !important;
+        background-color: transparent;
+        border-radius: 5px;
+        border: 1px solid @main-color;
+        // color: @white-color;
+      }
 
-        #login {
-          padding: 7px 20px !important;
-          background-color: transparent;
-          border-radius: 5px;
-          border: 1px solid @main-color;
-        }
-
-        .nav-link.active,
-        .nav-link:hover {
-          color: @white-color !important;
-          background: @main-color !important;
-          border-radius: 5px;
-        }
+      .nav-link.active,
+      .nav-link:hover {
+        color: @white-color !important;
+        background: @main-color !important;
+        border-radius: 5px;
       }
     }
   }
-  main {
-    margin-bottom: 280px;
-    /************************************* MAP *************************************/
-    #map {
-      padding: 150px 0;
-      h2 {
-        color: @light-grey-color;
-        font-size: 2rem;
-        font-family: @roboto-bold-font;
-      }
-      .container {
-        .col-md-12 {
-          .input-group {
+}
+/************************************* HEADER *************************************/
+header {
+  margin: 100px 0 280px 0;
+  padding: 50px 0;
+  .container {
+    h1 {
+      color: @light-grey-color;
+      font-size: 2rem;
+      font-family: @roboto-bold-font;
+    }
+    .row {
+      .col-md-4 {
+        .intro-text {
+          h4 {
+            font-size: 1rem;
+            font-weight: 500;
+            line-height: 2;
             font-family: @roboto-medium-font;
-            color: @black-color;
-            font-size: 0.7rem;
-          }
-          #map-box {
-            border-radius: 5px;
-            text-align: center;
             color: @light-grey-color;
-            font-size: 1.5rem;
+            margin-bottom: 1rem;
+          }
+          span {
             font-family: @roboto-bold-font;
-            border: 1px solid @light-grey-color;
-            height: 500px;
-            width: auto;
+            font-size: 1rem;
+          }
+          a {
+            color: @main-color;
+            font-size: 1rem;
+            margin-left: 15px;
+            float: right;
+          }
+        }
+      }
+      .col-md-8 {
+        #contact-form {
+          box-shadow: 0px 0px 27px -8px @light-grey-color;
+          padding: 3%;
+          border-radius: 5px;
+          opacity: 0;
+          transition: all 2.5s ease-out;
+          width: 0;
+          .row {
+            margin: 2% 0;
+            .form-control:focus {
+              outline: 0;
+              box-shadow: 0 0 0 0.1rem @main-color;
+            }
+            input,
+            textarea {
+              font-family: @roboto-medium-font;
+            }
+            label {
+              font-family: @roboto-bold-font;
+              cursor: pointer;
+            }
+          }
+          button:hover {
+            transform: translateX(5px);
+            transition: all 0.5s ease-out;
           }
         }
       }
     }
-    /****/
   }
 }
 /********************************** FOOTER ****************************************/
 footer {
-  display: none;
   height: 280px;
   position: absolute;
   bottom: 0;
@@ -344,19 +316,19 @@ footer {
   color: @black-color;
 
   line-height: 1.2;
-  #scroll-top {
-    position: absolute;
-    bottom: 94%;
-    right: 1%;
-    background: @main-color;
-    color: @white-color;
-    padding: 7px 10px;
-    border-radius: 5px;
-    z-index: 5;
-    i {
-      font-size: 1.2rem;
-    }
-  }
+  //   #scroll-top {
+  //     position: absolute;
+  //     bottom: 94%;
+  //     right: 1%;
+  //     background: @main-color;
+  //     color: @white-color;
+  //     padding: 7px 10px;
+  //     border-radius: 5px;
+  //     z-index: 5;
+  //     i {
+  //       font-size: 1.2rem;
+  //     }
+  //   }
   .container {
     padding-bottom: 1%;
     .row {
@@ -429,22 +401,22 @@ footer {
 }
 /************************************* MEDIA-QUERY *************************************/
 @media (min-width: 300px) {
-  #wrapper #mainNav.navbar-shrink {
+  #mainNav.navbar-shrink {
     padding-top: 5px;
     padding-bottom: 5px;
     box-shadow: 4px -6px 19px 2px @light-grey-color;
   }
-  #wrapper #mainNav .navbar-toggler {
+  #mainNav .navbar-toggler {
     background: @main-color;
     color: @white-color;
   }
 }
+
 @media (max-width: 991px) {
-  #wrapper #mainNav {
-    background-color: @white-color;
+  #mainNav {
     padding-top: 5px;
   }
-  #wrapper #mainNav .navbar-toggler {
+  #mainNav .navbar-toggler {
     padding: 5px;
   }
 }
@@ -455,17 +427,17 @@ footer {
   }
 }
 @media (max-width: 768px) {
-  #wrapper #mainNav {
-    background-color: @white-color;
-  }
-  #wrapper #mainNav .navbar-toggler {
+  #mainNav .navbar-toggler {
     padding: 5px;
   }
-  #wrapper #mainNav .navbar-brand {
+  #mainNav .navbar-brand {
     width: 50%;
   }
-  #wrapper main #map {
-    padding: 150px 0 0 0;
+  header {
+    margin: 100px 0 100px 0;
+  }
+  header .container .row .col-md-4 .intro-text {
+    margin-bottom: 50px;
   }
   footer {
     position: relative !important;
@@ -476,12 +448,12 @@ footer {
   }
 }
 
-@media (max-width: 415px) {
-  #wrapper main {
-    margin-bottom: 150px;
+@media (max-width: 450px) {
+  #mainNav .navbar-brand img {
+    width: 60%;
   }
-  #wrapper #mainNav .navbar-toggler {
-    font-size: 13px;
+  #mainNav .navbar-toggler {
+    padding: 1px;
   }
   footer .container .row .col-md-4 .single-footer-widget {
     margin-top: 0 !important;

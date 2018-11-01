@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="assets/img/icons/favicon.png" type="image/x-icon">
+
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="assets/style/fonts/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/style/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/style/css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="assets/style/css/bootstrap-datepicker3.standalone.min.css">
+    <link rel="stylesheet" href="assets/style/css/animate.css">
+    <link rel="stylesheet" href="assets/style/css/pharmacies-registration.css">
+    <title>Wasfaty - Pharmacies Registration</title>
+</head>
+
+<body id="page-top" onload="myFunction()">
+    <div id="loader"></div>
+    <div id="wrapper" class="animate-bottom">
+        <!--=============================== NAVIGATION ================================== -->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+
+            <div class="container">
+
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/img/logo-en.png" alt="logo">
+                </a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+
+                        <li class="nav-item">
+                            <a class="nav-link btn" href="index.html">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link btn" href="Confirmed-Pharmacies.html">Confirmed Pharmacies</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link btn" href="#page-top">Pharmacies Registration</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn" href="contact-us.html">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn" href="#" id="login">Login</a>
+                        </li>
+
+                    </ul> <!-- End navbar-nav -->
+                </div> <!-- End collapse -->
+            </div> <!-- End container -->
+        </nav>
+        <!--================================ MAIN ===================================== -->
+        <main>
+            <section id="pharmacies-registration">
+                <h2 class="text-center text-capitalize">
+                    Pharmacies Registration
+                </h2>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8" id="registration-left">
+                            <form action="" id="register-form">
+
+                                <div class="row">
+                                    <div class="col">
+                                        <input type="text" class="form-control" placeholder="Contact Person">
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" class="form-control" placeholder="Business Name">
+                                    </div>
+                                </div> <!-- End row ! -->
+
+                                <div class="row">
+                                    <div class="col">
+                                        <input type="text" class="form-control" placeholder="Contact Phone Number">
+                                    </div>
+                                    <div class="col">
+                                        <select id="inputState" class="form-control">
+                                            <option selected>Type: Company</option>
+                                            <option>Type: Organization</option>
+                                        </select>
+                                    </div>
+                                </div> <!-- End row ! -->
+
+                                <div class="row">
+                                    <div class="col">
+                                        <input type="text" class="form-control" placeholder="Social ID Type">
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" class="form-control" placeholder="Social ID Number">
+                                    </div>
+
+                                </div> <!-- End row ! -->
+
+                                <div class="row">
+                                    <div class="col">
+                                        <label class="col-form-label" for="social-id-expire">Social ID Expiration Date</label>
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" class="datepicker form-control" data-date-format="mm/dd/yyyy"
+                                            placeholder="mm/dd/yyyy" id="social-id-expire">
+                                    </div>
+                                </div> <!-- End row ! -->
+
+                                <div class="row">
+                                    <div class="col">
+                                        <input type="text" class="form-control" placeholder="Business Registration Number">
+                                    </div>
+                                </div> <!-- End row ! -->
+
+                                <div class="row">
+                                    <div class="col">
+                                        <label class="col-form-label" for="business-start-date">Business Registration
+                                            Start
+                                            Date</label>
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" class="datepicker form-control" data-date-format="mm/dd/yyyy"
+                                            placeholder="mm/dd/yyyy" id="business-start-date">
+                                    </div>
+                                </div> <!-- End row ! -->
+
+                                <div class="row">
+                                    <div class="col">
+                                        <label class="col-form-label" for="business-end-date">Business Registration End
+                                            Date</label>
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" class="datepicker form-control" data-date-format="mm/dd/yyyy"
+                                            placeholder="mm/dd/yyyy" id="business-end-date">
+                                    </div>
+                                </div> <!-- End row ! -->
+
+                                <div class="row">
+                                    <div class="col">
+                                        <input type="text" class="form-control" placeholder="Number Of Branches">
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" class="form-control" placeholder="Email Address">
+                                    </div>
+
+                                </div> <!-- End row ! -->
+
+                                <div class="row">
+                                    <div class="col">
+                                        <input type="text" class="form-control" placeholder="Business Phone">
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" class="form-control" placeholder="City">
+                                    </div>
+                                </div> <!-- End row ! -->
+
+                                <div class="row">
+                                    <div class="col">
+                                        <input type="text" class="form-control" placeholder="Bank Account Number">
+                                    </div>
+                                </div> <!-- End row ! -->
+
+                                <div class="row">
+                                    <div class="col">
+                                        <label class="col-form-label" for="sub-start-date">Start Subscription Date</label>
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" class="datepicker form-control" data-date-format="mm/dd/yyyy"
+                                            placeholder="mm/dd/yyyy" id="sub-start-date">
+                                    </div>
+                                </div> <!-- End row ! -->
+
+                                <div class="row">
+                                    <div class="col">
+                                        <label class="col-form-label" for="sub-end-date">End Subscription Date</label>
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" class="datepicker form-control" data-date-format="mm/dd/yyyy"
+                                            placeholder="mm/dd/yyyy" id="sub-end-date">
+                                    </div>
+                                </div> <!-- End row ! -->
+
+                                <div class="form-group row">
+                                    <div class="col">
+                                        <button type="submit" class="btn btn-block btn-custom">Send</button>
+                                    </div>
+                                </div>
+
+                            </form> <!-- End FORM ! -->
+
+                        </div> <!-- End registration-left ! -->
+
+
+                        <div class="col-md-4" id="registration-right">
+                            <div class="form-group row">
+                                <div class="col">
+                                    <div id="location" class="text-center">
+                                        <span class="d-block">
+                                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                            Choose Business Location :
+                                        </span>
+                                        <span class="coords d-inline-block">
+                                            31.4277992248535
+                                        </span>
+                                        ,
+                                        <span class="coords d-inline-block">
+                                            31.4277992248535
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="pharmacies-map">
+                                HERE IS A MAP WITH THE Pharmacies Registration
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- </div> -->
+            </section>
+        </main>
+    </div>
+    <!--=============================== FOOTER ====================================== -->
+    <footer id="footer">
+        <a id="scroll-top" href="#page-top"><i class="fa fa-angle-up"></i></a>
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-4">
+                    <div class="single-footer-widget" style="margin-top: -35px;">
+                        <h4 class="footer-title">
+                            <img src="./assets/img/logo-en.png" style="width:39%;" />
+                        </h4>
+
+                        <div>
+                            An additional access channel is to link hospitals and primary health care centers to
+                            private
+                            pharmacies so that patients can receive the drug from their nearest pharmacy in the
+                            neighborhood.
+                        </div>
+
+                    </div>
+                </div> <!-- End col-md-4 ! -->
+
+                <div class="col-md-4">
+                    <div class="single-footer-widget">
+                        <h4 class="footer-title">Links</h4>
+                        <ul class="footer-links">
+                            <li>
+                                <a href="#">Home</a>
+                            </li>
+                            <li>
+                                <a href="#">Confirmed Pharmacies</a>
+                            </li>
+                            <li>
+                                <a href="#">Pharmacies Registration</a>
+                            </li>
+                            <li>
+                                <a href="#">Contact Us</a>
+                            </li>
+                            <li>
+                                <a href="#">عربي</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div> <!-- End col-md-4 ! -->
+
+                <div class="col-md-4">
+
+                    <div class="footer-social">
+                        <h4 class="footer-title">Reach us</h4>
+
+                        <div class="mb-3">
+                            <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                            <span>+966500337722</span>
+                        </div>
+
+                        <div class="mb-3">
+                            <i class="fa fa-envelope"></i>
+                            <a href="#">wasfaty@nupco.com</a>
+                        </div>
+
+                        <a href="#" target="_blank">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="#" target="_blank">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="#" target="_blank">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="#" target="_blank">
+                            <i class="fa fa-google-plus"></i>
+                        </a>
+                    </div>
+
+                </div> <!-- End col-md-4 ! -->
+
+            </div> <!-- End row ! -->
+        </div>
+        <div id="copy-right" class="text-center">
+            <p class="footer-text m-0">
+                All rights reserved to National Company for unified procurement of pharmaceuticals
+                <img src="./assets/img/nupco.png" class="img-fluid h-25" alt="nupco">
+            </p>
+        </div> <!-- End copy-right ! -->
+    </footer>
+    <!--================================ SCRIPTS =================================== -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="assets/style/js/jquery.min.js"></script>
+    <script src="assets/style/js/popper.min.js"></script>
+    <script src="assets/style/js/bootstrap.min.js"></script>
+    <!-- Plugins -->
+    <script src="assets/style/js/scrollreveal.min.js"></script>
+    <script src="assets/style/js/bootstrap-datepicker.min.js"></script>
+    <!-- CUSTOM SCRIPTS -->
+    <script src="assets/style/js/main.js"></script>
+
+    <script>
+        /********************************* DATE PICKER ************************************/
+        $(".datepicker").datepicker();
+    </script>
+</body>
+
+</html>

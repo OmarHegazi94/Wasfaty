@@ -18,9 +18,9 @@
 /************************************** VARIABLES ****************************************/
 /************************************** GENERAL RESET **************************************/
 /* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+       v2.0 | 20110126
+       License: none (public domain)
+    */
 html,
 body,
 div,
@@ -139,9 +139,10 @@ a:hover {
 html {
   background-color: #ffffff;
   overflow-x: hidden;
+  position: relative;
+  min-height: 100%;
 }
 body {
-  background-color: #ffffff;
   overflow: hidden;
 }
 section {
@@ -234,13 +235,13 @@ h5 {
 #wrapper {
   display: none;
   /************************************* NAVBAR *************************************/
-  /************************************* HEADER *************************************/
-  /************************************* ABOUT *************************************/
-  /************************************* FAQ *************************************/
+  /************************************* MAIN-CONTENT *************************************/
 }
 #wrapper #mainNav {
-  padding-top: 1rem;
+  background-color: #ffffff;
   transition: padding-top 0.3s, padding-bottom 0.3s;
+  padding-top: 0.5rem;
+  box-shadow: 4px -6px 19px 2px #8492af;
 }
 #wrapper #mainNav .navbar-toggler {
   padding: 13px;
@@ -258,13 +259,14 @@ h5 {
   font-size: 14px;
   padding: 7px 15px !important;
   letter-spacing: 0.5px;
-  color: #ffffff;
+  color: #000000 !important;
   font-family: "roboto-medium", Arial, sans-serif;
   margin-right: 2px;
   border: 1px solid transparent;
 }
 #wrapper #mainNav .navbar-nav .nav-item #login {
   padding: 7px 20px !important;
+  background-color: transparent;
   border-radius: 5px;
   border: 1px solid #12cbc4;
 }
@@ -274,146 +276,69 @@ h5 {
   background: #12cbc4 !important;
   border-radius: 5px;
 }
-#wrapper header {
-  color: #ffffff;
+#wrapper main {
+  margin-bottom: 280px;
 }
-#wrapper header .owl-carousel .item .slider-img {
-  height: 700px;
-  position: relative;
-  transition: all 25s ease;
-  transform-style: preserve-3d;
-  width: 100%;
+#wrapper main #pharmacies-registration {
+  margin-top: 100px;
 }
-#wrapper header .owl-carousel .item .carousel-caption {
-  top: 28%;
-}
-#wrapper header .owl-carousel .item .carousel-caption .container .col-md-6 .card {
-  border-radius: 10px;
-  transition: all 0.5s ease-out;
-  border: 0;
-  background: transparent;
-}
-#wrapper header .owl-carousel .item .carousel-caption .container .col-md-6 .card .header-text-img {
-  width: 20%;
-  margin: 0 auto;
-  z-index: 2;
-}
-#wrapper header .owl-carousel .item .carousel-caption .container .col-md-6 .card .card-body {
-  background: #ffffff;
-  border-radius: 10px;
-  margin-top: -30px;
-}
-#wrapper header .owl-carousel .item .carousel-caption .container .col-md-6 .card .card-body .card-title {
-  text-align: center;
-  padding: 20px;
-  font-family: "roboto-medium", Arial, sans-serif;
-  color: #5b6b8c;
-  font-size: 1.5rem;
-  text-align: left;
-}
-#wrapper header .owl-carousel .owl-nav {
-  z-index: 10;
+#wrapper main #pharmacies-registration h2 {
+  color: #8492af;
   font-size: 2rem;
+  font-family: "roboto-bold", Helvetica, Arial, sans-serif;
 }
-#wrapper header .owl-carousel .owl-nav .owl-prev {
-  position: absolute;
-  left: 0;
-  bottom: 50%;
-  outline: 0 !important;
-  box-shadow: none !important;
+#wrapper main #pharmacies-registration .container .row #registration-left #register-form {
+  opacity: 0;
+  transition: all 2.5s ease-out;
+  width: 0;
+  box-shadow: 0px 0px 27px -8px #8492af;
+  padding: 1%;
+  border-radius: 5px;
 }
-#wrapper header .owl-carousel .owl-nav .owl-prev span {
-  background: #12cbc4;
-  padding: 7px 20px 10px 20px;
+#wrapper main #pharmacies-registration .container .row #registration-left #register-form .row {
+  margin: 2% 0;
+}
+#wrapper main #pharmacies-registration .container .row #registration-left #register-form .row .col .form-control:focus {
   outline: 0;
-  border-radius: 5px;
+  box-shadow: 0 0 0 0.1rem #12cbc4;
 }
-#wrapper header .owl-carousel .owl-nav .owl-next {
-  position: absolute;
-  right: 0;
-  bottom: 50%;
-  outline: 0 !important;
-  box-shadow: none !important;
+#wrapper main #pharmacies-registration .container .row #registration-left #register-form .row .col input {
+  font-family: "roboto-medium", Arial, sans-serif;
 }
-#wrapper header .owl-carousel .owl-nav .owl-next span {
-  background: #12cbc4;
-  padding: 7px 20px 10px 20px;
-  border-radius: 5px;
+#wrapper main #pharmacies-registration .container .row #registration-left #register-form .row .col select {
+  font-family: "roboto-medium", Arial, sans-serif;
 }
-#wrapper header .owl-theme .owl-nav [class*="owl-"]:hover {
-  background: transparent;
-}
-#wrapper #about h2 {
-  color: #8492af;
-  font-size: 2rem;
+#wrapper main #pharmacies-registration .container .row #registration-left #register-form .row .col label {
   font-family: "roboto-bold", Helvetica, Arial, sans-serif;
 }
-#wrapper #about .container .row .col-md-12 .card-deck .card {
-  border: none;
-  border-radius: 0.5rem;
-  box-shadow: -1px -1px 15px 2px #e1e4eb;
-  padding: 2% 0 0 0;
+#wrapper main #pharmacies-registration .container .row #registration-right #location span {
+  font-family: "roboto-medium", Arial, sans-serif;
 }
-#wrapper #about .container .row .col-md-12 .card-deck .card img {
-  width: 30%;
-  margin: 0 auto;
+#wrapper main #pharmacies-registration .container .row #registration-right #location span i {
+  color: #12cbc4;
 }
-#wrapper #about .container .row .col-md-12 .card-deck .card .card-body .card-title {
+#wrapper main #pharmacies-registration .container .row #registration-right #pharmacies-map {
+  border-radius: 5px;
   text-align: center;
-  font-size: 1.2rem;
-  font-family: "roboto-bold", Helvetica, Arial, sans-serif;
-}
-#wrapper #about .container .row .col-md-12 .card-deck .card .card-body .card-text {
-  font-size: 1rem;
-  font-family: "roboto-medium", Arial, sans-serif;
-  line-height: 1.2;
-  color: #65779b;
-}
-#wrapper #about .container .row .col-md-12 .card-deck .card:hover {
-  background: #12cbc4;
-  color: #ffffff;
-  transition: all 0.5s ease-out;
-}
-#wrapper #about .container .row .col-md-12 .card-deck .card:hover .card-text {
-  color: #ffffff;
-  transition: all 0.5s ease-out;
-}
-#wrapper #faq h2 {
   color: #8492af;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-family: "roboto-bold", Helvetica, Arial, sans-serif;
-}
-#wrapper #faq .container [data-toggle="collapse"] .fa:before {
-  content: "\f139";
-}
-#wrapper #faq .container [data-toggle="collapse"].collapsed .fa:before {
-  content: "\f13a";
-}
-#wrapper #faq .container #accordion .card {
-  margin-bottom: 20px;
-}
-#wrapper #faq .container #accordion .card .card-header h5 button {
-  font-size: 1.4rem;
-  font-family: "roboto", Georgia, serif;
-  background: #12cbc4;
-  color: #ffffff;
-}
-#wrapper #faq .container #accordion .card .card-header h5 button i {
-  float: right;
-}
-#wrapper #faq .container #accordion .card .card-body {
-  font-size: 1.2rem;
-  font-family: "roboto-medium", Arial, sans-serif;
+  border: 1px solid #8492af;
+  height: 500px;
+  width: auto;
 }
 /********************************** FOOTER ****************************************/
 footer {
   display: none;
+  height: 280px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   padding: 5% 0 0 0;
   background: #d7f5f4;
   font-family: "roboto-medium", Arial, sans-serif;
   color: #000000;
   line-height: 1.2;
-  position: relative;
 }
 footer #scroll-top {
   position: absolute;
@@ -490,7 +415,6 @@ footer #copy-right p img {
   #wrapper #mainNav.navbar-shrink {
     padding-top: 5px;
     padding-bottom: 5px;
-    background-color: #ffffff;
     box-shadow: 4px -6px 19px 2px #8492af;
   }
   #wrapper #mainNav .navbar-toggler {
@@ -502,9 +426,6 @@ footer #copy-right p img {
   #wrapper #mainNav {
     background-color: #ffffff;
     padding-top: 5px;
-  }
-  #wrapper #mainNav .navbar-nav .nav-item .nav-link {
-    color: #000000 !important;
   }
   #wrapper #mainNav .navbar-toggler {
     padding: 5px;
@@ -523,36 +444,43 @@ footer #copy-right p img {
   #wrapper #mainNav .navbar-brand {
     width: 50%;
   }
-  #wrapper header .owl-carousel .item .slider-img {
-    height: 550px;
+  #wrapper main #pharmacies-registration {
+    margin-top: 70px;
+    padding-bottom: 0;
   }
-  #wrapper header .owl-carousel .item .carousel-caption .container .col-md-6 .card .card-body .card-title {
-    font-size: 1rem;
+  #wrapper main #pharmacies-registration .container .row #registration-left #register-form {
+    margin-bottom: 3rem;
   }
-  #wrapper header .owl-carousel .owl-nav .owl-next span,
-  #wrapper header .owl-carousel .owl-nav .owl-prev span {
-    font-size: 1rem;
-  }
-  #wrapper #faq .container #accordion .card .card-header h5 button {
-    font-size: 0.7rem;
-  }
-  #wrapper #faq .container #accordion .card .card-body {
-    font-size: 1rem;
+  footer {
+    position: relative !important;
+    height: unset;
   }
   footer .container .row .col-md-4 {
     padding: 20px;
   }
 }
-@media (max-width: 415px) {
+@media (max-width: 450px) {
+  #wrapper main {
+    margin-bottom: 150px;
+  }
+  #wrapper main #pharmacies-registration .container .row #registration-right {
+    margin-top: 30px;
+  }
+  #wrapper #mainNav .navbar-brand img {
+    width: 60%;
+  }
   #wrapper #mainNav .navbar-toggler {
-    font-size: 13px;
+    padding: 1px;
   }
-  #wrapper header .owl-carousel .item .carousel-caption .container .col-md-6 .card .header-text-img {
-    width: 30%;
-    margin-bottom: 5px;
+  #wrapper main #pharmacies-registration h2 {
+    font-size: 1.5rem;
   }
-  #wrapper header .owl-carousel .item .carousel-caption .container .col-md-6 .card .card-body {
-    padding: 5px;
+  #wrapper main #pharmacies-registration .container .row #registration-left #register-form {
+    font-size: 0.8rem;
+  }
+  #wrapper main #pharmacies-registration .container .row #registration-left #register-form .row .col input,
+  #wrapper main #pharmacies-registration .container .row #registration-left #register-form .row .col select {
+    font-size: 0.8rem;
   }
   footer .container .row .col-md-4 .single-footer-widget {
     margin-top: 0 !important;

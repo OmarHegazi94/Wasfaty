@@ -12,80 +12,83 @@
     <link rel="stylesheet" href="assets/style/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/style/css/animate.css">
     <link rel="stylesheet" href="assets/style/css/confirmed-pharmacies.css">
-    <title>Wasfaty</title>
+    <title>Wasfaty - Confirmed Pharmacies</title>
 </head>
 
-<body id="page-top">
-    <!--=============================== NAVIGATION ================================== -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+<body id="page-top" onload="myFunction()">
+    <div id="loader"></div>
+    <div id="wrapper" class="animate-bottom">
+        <!--=============================== NAVIGATION ================================== -->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
 
-        <div class="container">
-
-            <a class="navbar-brand" href="#page-top">
-                <img src="assets/img/logo-en.png" alt="logo">
-            </a>
-
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
-
-                    <li class="nav-item">
-                        <a class="nav-link btn" href="index.html">Home</a>
-                    </li>
-
-                    <li class="nav-item active">
-                        <a class="nav-link btn" href="#">Confirmed Pharmacies</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link btn" href="#">Pharmacies Registration</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link btn" href="#">Contact Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link btn" href="#" id="login">Login</a>
-                    </li>
-
-                </ul> <!-- End navbar-nav -->
-            </div> <!-- End collapse -->
-        </div> <!-- End container -->
-    </nav>
-    <!--================================ MAIN ===================================== -->
-    <main>
-        <section id="map">
-            <h2 class="text-center text-capitalize">
-                Confirmed Pharmacies
-            </h2>
             <div class="container">
 
-                <div class="col-md-12">
-                    <form>
-                        <div class="input-group mb-2">
-                            <div class="input-group-prepend">
-                                <div class="input-group-text">
-                                    <i class="fa fa-search" aria-hidden="true"></i>
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/img/logo-en.png" alt="logo">
+                </a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+
+                        <li class="nav-item">
+                            <a class="nav-link btn" href="index.html">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link btn" href="#page-top">Confirmed Pharmacies</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link btn" href="Pharmacies-Registration.html">Pharmacies Registration</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn" href="contact-us.html">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn" href="#" id="login">Login</a>
+                        </li>
+
+                    </ul> <!-- End navbar-nav -->
+                </div> <!-- End collapse -->
+            </div> <!-- End container -->
+        </nav>
+        <!--================================ MAIN ===================================== -->
+        <main>
+            <section id="map">
+                <h2 class="text-center text-capitalize">
+                    Confirmed Pharmacies
+                </h2>
+                <div class="container">
+
+                    <div class="col-md-12">
+                        <form>
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <i class="fa fa-search" aria-hidden="true"></i>
+                                    </div>
                                 </div>
+                                <input type="text" class="form-control" placeholder="Search for Pharmacies in town and neighborhood">
                             </div>
-                            <input type="text" class="form-control" placeholder="Search for Pharmacies in town and neighborhood">
+                        </form>
+
+                        <div id="map-box">
+                            HERE IS A MAP WITH ALL OF THE Confirmed Pharmacies
                         </div>
-                    </form>
-
-                    <div id="map-box">
-                        HERE IS A MAP WITH ALL OF THE Confirmed Pharmacies
                     </div>
-                </div>
 
-            </div>
-            </div>
-        </section>
-    </main>
+                </div>
+                <!-- </div> -->
+            </section>
+        </main>
+    </div>
     <!--=============================== FOOTER ====================================== -->
-    <footer>
+    <footer id="footer">
         <a id="scroll-top" href="#page-top"><i class="fa fa-angle-up"></i></a>
         <div class="container">
             <div class="row">
